@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>BS.$(MSBuildProjectName)</AssemblyName>
+        <RootNamespace>BS.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Nado.ApiClient\Nado.ApiClient.csproj" />
+      <ProjectReference Include="..\Nado.Blake2Sharp\Nado.Blake2Sharp.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MessagePack" Version="2.4.59" />
+      <PackageReference Include="MessagePackAnalyzer" Version="2.4.59">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
+</Project>
