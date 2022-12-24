@@ -1,4 +1,4 @@
-# Nado .NET SDK
+# NADO .NET SDK
 
 > The code found in this repository is unaudited and incomplete. Block Sentinel is not responsible for any losses 
 > incurred when using this code.
@@ -7,7 +7,7 @@
 
 ## Resources
 
-* [Nado](https://nado.live)
+* [NADO](https://nado.live)
 * [GitHub](https://github.com/hclivess/nado)
 
 ## Contributing to this project
