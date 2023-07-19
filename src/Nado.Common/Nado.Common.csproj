@@ -9,16 +9,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Nado.ApiClient\Nado.ApiClient.csproj" />
-      <ProjectReference Include="..\Nado.Blake2Sharp\Nado.Blake2Sharp.csproj" />
+        <ProjectReference Include="..\Nado.ApiClient\Nado.ApiClient.csproj"/>
+        <ProjectReference Include="..\Nado.Blake2Sharp\Nado.Blake2Sharp.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="MessagePack" Version="2.4.59" />
-      <PackageReference Include="MessagePackAnalyzer" Version="2.4.59">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
+        <PackageReference Include="MessagePack" Version="2.5.124"/>
+        <PackageReference Include="MessagePackAnalyzer" Version="2.5.124">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
 
 </Project>
