@@ -6,7 +6,7 @@ namespace BS.Nado.ApiClient.Responses;
 public class TransactionBufferResponse
 {
     [JsonPropertyName("transaction_buffer")]
-    public Dictionary<string, TransactionItem> TransactionBuffer { get; set; } = new();
+    public List<TransactionItem> TransactionBuffer { get; set; } = new();
 
     public class TransactionItem
     {
@@ -17,11 +17,14 @@ public class TransactionBufferResponse
         public long Timestamp { get; set; }
         public JsonObject Data { get; set; } = null!;
         public string Nonce { get; set; } = null!;
-        public long Fee { get; set; }
 
         [JsonPropertyName("public_key")]
         public string PublicKey { get; set; } = null!;
 
+        [JsonPropertyName("target_block")]
+        public long TargetBlock { get; set; }
+
+        public long Fee { get; set; }
         public string TxId { get; set; } = null!;
         public string Signature { get; set; } = null!;
     }

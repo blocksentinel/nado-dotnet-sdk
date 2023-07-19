@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
 
 namespace BS.Nado.ApiClient.Responses;
 
@@ -28,7 +29,7 @@ public class GetBlocksAfterResponse
         public long BlockTimestamp { get; set; }
 
         [JsonPropertyName("block_transactions")]
-        public object[] BlockTransactions { get; set; } = Array.Empty<object>();
+        public List<TransactionItem> BlockTransactions { get; set; } = null!;
 
         [JsonPropertyName("block_penalty")]
         public long BlockPenalty { get; set; }
@@ -41,5 +42,26 @@ public class GetBlocksAfterResponse
 
         [JsonPropertyName("block_reward")]
         public long BlockReward { get; set; }
+
+        public class TransactionItem
+        {
+            public string Sender { get; set; } = null!;
+            public string Recipient { get; set; } = null!;
+
+            public long Amount { get; set; }
+            public long Timestamp { get; set; }
+            public JsonObject Data { get; set; } = null!;
+            public string Nonce { get; set; } = null!;
+
+            [JsonPropertyName("public_key")]
+            public string PublicKey { get; set; } = null!;
+
+            [JsonPropertyName("target_block")]
+            public long TargetBlock { get; set; }
+
+            public long Fee { get; set; }
+            public string TxId { get; set; } = null!;
+            public string Signature { get; set; } = null!;
+        }
     }
 }

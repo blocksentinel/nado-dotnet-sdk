@@ -18,6 +18,9 @@ public class StatusResponse
     [JsonPropertyName("latest_block_hash")]
     public string? LatestBlockHash { get; set; }
 
+    [JsonPropertyName("earliest_block_hash")]
+    public string? EarliestBlockHash { get; set; }
+
     public int Protocol { get; set; }
 
     public string Version { get; set; } = null!;

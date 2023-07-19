@@ -60,6 +60,12 @@ public interface INadoApi
         CancellationToken cancellationToken = default
     );
 
+    [Get("/get_supply")]
+    Task<GetSupplyResponse> GetSupply(
+        string? compress = null,
+        CancellationToken cancellationToken = default
+    );
+
     [Get("/get_latest_block")]
     Task<GetLatestBlockResponse> GetLatestBlock(
         string? compress = null,
@@ -88,12 +94,6 @@ public interface INadoApi
         CancellationToken cancellationToken = default
     );
 
-    [Get("/transaction_hash_pool")]
-    Task<TransactionHashPoolResponse> TransactionHashPool(
-        string? compress = null,
-        CancellationToken cancellationToken = default
-    );
-
     [Get("/transaction_buffer")]
     Task<TransactionBufferResponse> TransactionBuffer(
         string? compress = null,
@@ -112,6 +112,12 @@ public interface INadoApi
         CancellationToken cancellationToken = default
     );
 
+    [Get("/peer_buffer")]
+    Task<PeerBufferResponse> PeerBuffer(
+        string? compress = null,
+        CancellationToken cancellationToken = default
+    );
+
     [Get("/unreachable")]
     Task<UnreachableResponse> Unreachable(
         string? compress = null,
@@ -120,6 +126,18 @@ public interface INadoApi
 
     [Get("/block_producers")]
     Task<BlockProducersResponse> BlockProducers(
+        string? compress = null,
+        CancellationToken cancellationToken = default
+    );
+
+    [Get("/penalties")]
+    Task<PenaltiesResponse> Penalties(
+        string? compress = null,
+        CancellationToken cancellationToken = default
+    );
+
+    [Get("/transaction_hash_pool")]
+    Task<TransactionHashPoolResponse> TransactionHashPool(
         string? compress = null,
         CancellationToken cancellationToken = default
     );
@@ -136,14 +154,8 @@ public interface INadoApi
         CancellationToken cancellationToken = default
     );
 
-    [Get("/penalties")]
-    Task<PenaltiesResponse> Penalties(
-        string? compress = null,
-        CancellationToken cancellationToken = default
-    );
-
-    [Get("/penalty")]
-    Task<PenaltyResponse> Penalty(
+    [Get("/trust_pool")]
+    Task<GetTrustPoolResponse> GetTrustPool(
         string? compress = null,
         CancellationToken cancellationToken = default
     );
@@ -161,21 +173,9 @@ public interface INadoApi
         CancellationToken cancellationToken = default
     );
 
-    [Get("/trust_pool")]
-    Task<GetTrustPoolResponse> GetTrustPool(
-        string? compress = null,
-        CancellationToken cancellationToken = default
-    );
-
     [Get("/announce_peer")]
     Task<string> AnnouncePeer(
         string ip,
-        CancellationToken cancellationToken = default
-    );
-
-    [Get("/terminate")]
-    Task<HttpResponseMessage> Terminate(
-        string key,
         CancellationToken cancellationToken = default
     );
 
@@ -194,6 +194,17 @@ public interface INadoApi
     [Get("/force_sync_ip")]
     Task<string> ForceSyncIp(
         string ip,
+        string key,
+        CancellationToken cancellationToken = default
+    );
+
+    [Get("/health")]
+    Task<HealthResponse> Health(
+        CancellationToken cancellationToken = default
+    );
+
+    [Get("/terminate")]
+    Task<HttpResponseMessage> Terminate(
         string key,
         CancellationToken cancellationToken = default
     );
