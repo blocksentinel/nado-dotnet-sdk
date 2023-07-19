@@ -24,11 +24,14 @@ public class MessageTransaction
     [Key("nonce")]
     public string Nonce { get; init; } = null!;
 
-    [Key("fee")]
-    public long Fee { get; init; }
-
     [Key("public_key")]
     public string PublicKey { get; init; } = null!;
+
+    [Key("target_block")]
+    public long TargetBlock { get; set; }
+
+    [Key("fee")]
+    public long Fee { get; init; }
 
     [Key("txid")]
     public string TxId { get; init; } = null!;

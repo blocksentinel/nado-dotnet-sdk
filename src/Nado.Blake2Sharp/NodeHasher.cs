@@ -35,4 +35,3 @@ public abstract class NodeHasher
         Update(data, 0, data.Length);
     }
 }
-

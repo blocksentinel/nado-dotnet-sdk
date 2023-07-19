@@ -23,11 +23,14 @@ public class SignedTransaction
     [JsonPropertyName("nonce")]
     public string Nonce { get; set; } = null!;
 
-    [JsonPropertyName("fee")]
-    public long Fee { get; set; }
-
     [JsonPropertyName("public_key")]
     public string PublicKey { get; set; } = null!;
+
+    [JsonPropertyName("target_block")]
+    public long TargetBlock { get; set; }
+
+    [JsonPropertyName("fee")]
+    public long Fee { get; set; }
 
     [JsonPropertyName("txid")]
     public string TxId { get; set; } = null!;

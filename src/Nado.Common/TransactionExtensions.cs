@@ -16,8 +16,9 @@ public static class TransactionExtensions
             Timestamp = input.Timestamp,
             Data = input.Data,
             Nonce = input.Nonce,
-            Fee = input.Fee,
-            PublicKey = input.PublicKey
+            PublicKey = input.PublicKey,
+            TargetBlock = input.TargetBlock,
+            Fee = input.Fee
         };
     }
 
@@ -35,8 +36,9 @@ public static class TransactionExtensions
             Timestamp = input.Timestamp,
             Data = input.Data,
             Nonce = input.Nonce,
-            Fee = input.Fee,
             PublicKey = input.PublicKey,
+            TargetBlock = input.TargetBlock,
+            Fee = input.Fee,
             Signature = signature
         };
     }

@@ -82,4 +82,3 @@ namespace BS.Nado.Blake2Sharp;
 		}
 	}
 #endif
-

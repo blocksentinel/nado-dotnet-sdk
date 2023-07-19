@@ -12,23 +12,21 @@
 namespace BS.Nado.Blake2Sharp.UnitTests;
 /*class DebugNodeHasher : NodeHasher
 {
-	StringBuilder data = new StringBuilder();
+    StringBuilder data = new StringBuilder();
 
-	public override void Init(int depth, long nodeOffset)
-	{
-		data.AppendFormat("({0}-{1}", depth, nodeOffset);
-	}
+    public override void Init(int depth, long nodeOffset)
+    {
+        data.AppendFormat("({0}-{1}", depth, nodeOffset);
+    }
 
-	public override byte[] Finish(bool isEndOfLayer)
-	{
-		data.Append(")");
-		return Encoding.ASCII.GetBytes(data.ToString());
-	}
+    public override byte[] Finish(bool isEndOfLayer)
+    {
+        data.Append(")");
+        return Encoding.ASCII.GetBytes(data.ToString());
+    }
 
-	public override void Update(byte[] data, int start, int count)
-	{
-		data.Append(Encoding.ASCII.GetString(data, start, count));
-	}
+    public override void Update(byte[] data, int start, int count)
+    {
+        data.Append(Encoding.ASCII.GetString(data, start, count));
+    }
 }*/
-
-

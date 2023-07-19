@@ -49,4 +49,3 @@ public sealed class Blake2BTreeConfig : ICloneable
         return result;
     }
 }
-

@@ -59,7 +59,7 @@ public class Signer : ISigner
     {
         Ed25519Signer signer = new();
         signer.Init(true, new Ed25519PrivateKeyParameters(Hex.DecodeStrict(privateKey)));
-        byte[]? packed = MessagePackSerializer.Serialize(messageTx);
+        byte[] packed = MessagePackSerializer.Serialize(messageTx);
         signer.BlockUpdate(packed);
         byte[]? bytes = signer.GenerateSignature();
 

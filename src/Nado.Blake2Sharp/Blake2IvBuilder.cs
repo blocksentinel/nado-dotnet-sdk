@@ -99,4 +99,3 @@ internal static class Blake2IvBuilder
         rawConfig[2] = (rawConfig[2] & ~0xFFul) | depth;
     }
 }
-

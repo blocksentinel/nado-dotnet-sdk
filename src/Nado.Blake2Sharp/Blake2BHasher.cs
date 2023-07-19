@@ -72,4 +72,3 @@ internal class Blake2BHasher : Hasher
         _core.HashCore(data, start, count);
     }
 }
-
