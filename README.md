@@ -7,7 +7,7 @@
 
 ## Resources
 
-* [NADO](https://nado.live)
+* [NADO](https://nodeisok.com)
 * [GitHub](https://github.com/hclivess/nado)
 
 ## Contributing to this project
